@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheets/master.css">
+  <link rel="stylesheet" href="../stylesheets/payment.css">
+  <script type="text/javascript" src="../js/payment.js"></script>
+  <script src="https://kit.fontawesome.com/48cb218cfa.js" crossorigin="anonymous"></script>
+  <title>הסושי של עידו</title>
+</head>
+<body class="bg-light">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-list">
+          <li class='nav-item'>
+            <a class="nav-link" href="cart.html"><i class="fas fa-arrow-right fa-lg"></i> חזרה להזמנה</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <h4 id="title" class="text-center">סיכום הזמנה</h4>
+  <form id="payment-form">
+    <div id="items" class="d-grid gap-1">
+      <div class="card border-0 step-card shadow-sm">
+        <div class="card-body">
+          <h5>שיטת המשלוח</h5>
+          <p class="text-muted">אנא בחר שיטת משלוח</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="delivery-type-radio" id="delivery-radio" value="option1" required>
+            <label class="form-check-label" for="delivery-radio">משלוח</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="delivery-type-radio" id="pickup-radio" value="option2" required>
+            <label class="form-check-label" for="pickup-radio">איסוף עצמי</label>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 step-card shadow-sm">
+        <div class="card-body">
+          <h5>פרטי משלוח</h5>
+          <p class="text-muted">אנא הזן את פרטי הכתובת למשלוח</p>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="first-name" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="first-name-invalid" onblur="checkName(this)" required>
+                <label for="floatingInput" class="text-muted">שם פרטי*</label>
+                <div id="first-name-invalid" class="invalid-feedback">
+                  ערך לא תקין
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="last-name" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="last-name-invalid" onblur="checkName(this)" required>
+                <label for="floatingInput" class="text-muted">שם משפחה*</label>
+                <div id="last-name-invalid" class="invalid-feedback">
+                  ערך לא תקין
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="phone" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="phone-invalid" onblur="checkPhoneNumber(this)" required>
+                <label for="floatingInput" class="text-muted">טלפון*</label>
+                <div id="phone-invalid" class="invalid-feedback">
+                  מספר לא תקין
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="city" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="city-invalid" onblur="checkName(this)" required>
+                <label for="floatingInput" class="text-muted">עיר*</label>
+                <div id="city-invalid" class="invalid-feedback">
+                  ערך לא תקין
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="street" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="street-invalid" onblur="checkName(this)" required>
+                <label for="floatingInput" class="text-muted">רחוב*</label>
+                <div id="street-invalid" class="invalid-feedback">
+                  ערך לא תקין
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="home-number" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="home-number-invalid" onblur="checkNumber(this)" required>
+                <label for="floatingInput" class="text-muted">מספר בית*</label>
+                <div id="home-number-invalid" class="invalid-feedback">
+                  מספר לא תקין
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control form-control-sm" onblur="checkNumber(this)">
+                <label for="floatingInput" class="text-muted">דירה</label>
+                <div id="home-number-invalid" class="invalid-feedback">
+                  מספר לא תקין
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 step-card shadow-sm">
+        <div class="card-body">
+          <h5>אמצעי תשלום</h5>
+          <p class="text-muted">אנא בחר שיטת תשלום</p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="payment-radio" id="cash-radio" value="option1" onchange="paymentKindChecked()" required>
+            <label class="form-check-label" for="cash-radio">מזומן</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="cardRadio" class="form-check-input" type="radio" name="payment-radio" id="credit-radio" value="option2" onchange="paymentKindChecked()" required>
+            <label class="form-check-label" for="credit-radio">אשראי</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="payment-radio" id="bit-radio" value="option3" onchange="paymentKindChecked()" required>
+            <label class="form-check-label" for="bit-radio">העברה בביט</label>
+          </div>
+        </div>
+      </div>
+      <div id="cardDetails" class="card border-0 step-card shadow-sm visually-hidden">
+        <div class="card-body">
+          <h5>פרטי תשלום</h5>
+          <p class="text-muted">אנא הזן את פרטי כרטיס האשראי</p>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="card-number" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="card-number-invalid" onblur="checkCreditNum(this)">
+                <label for="floatingInput" class="text-muted">מספר כרטיס*</label>
+                <div id="card-number-invalid" class="invalid-feedback">
+                  מספר לא תקין
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="cvv" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="cvv-invalid" onblur="checkCVV(this)">
+                <label for="floatingInput" class="text-muted">cvv*</label>
+                <div id="cvv-invalid" class="invalid-feedback">
+                  יש להזין ערך בעל 3 ספרות
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-floating mb-3">
+                <input id="id-number" type="text" class="form-control form-control form-control-sm"
+                       aria-describedby="id-number-invalid" onblur="checkId(this)">
+                <label for="floatingInput" class="text-muted">ת.ז בעל הכרטיס*</label>
+                <div id="id-number-invalid" class="invalid-feedback">
+                  מספר לא תקין
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 step-card shadow-sm">
+        <div class="card-body">
+          <h5 id="totalPrice"></h5>
+        </div>
+      </div>
+      <div class="card bg-light border-0 step-card">
+        <div class="card-body">
+          <button type="submit" class="btn">בצע הזמנה</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="modal fade" id="success-order-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">ההזמנה הושלמה</h4>
+        </div>
+        <div class="modal-body">
+          הזמנתך נקלטה בהצלחה
+          <br>
+          לפרטים נוספים ניתן לפנות אליי בטלפון או בווצאפ
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-bs-dismiss="modal" onclick="backToHomePage()">הבנתי, תודה!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="error-toast" class="toast align-items-center text-white bg-danger border-0 fixed-bottom" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        אנא תקן את השדות הלא תקינים
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+</body>
+</html>
+
+
+
+
+
