@@ -1,0 +1,19 @@
+.navbar {
+    background-color: #393e46;
+}
+
+.step-card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 20px;
+    margin-top:20px;
+    width: 600px;
+}
+
+#title {
+    margin-top: 60px;  
+}
+
+label {
+    font-size: small;
+}

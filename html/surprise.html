@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.rtl.min.css" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/master.css">
+    <link rel="stylesheet" href="../stylesheets/surprise.css">
+    <script type="text/javascript" src="../js/master.js"></script>
+    <script src="https://kit.fontawesome.com/48cb218cfa.js" crossorigin="anonymous"></script>
+    <title>הסושי של עידו</title>
+</head>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav-list">
+                    <li class='nav-item'>
+                        <a class="nav-link" href="home.html">בית</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="about.html">אודות</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" aria-current='page' href="orders.html">הזמנות</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link" href="private.html">אירועים פרטיים</a>
+                    </li>
+                    <li class='nav-item'>
+                        <a class="nav-link active" href="surprise.html">סושי בהפתעה</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="card align-items-center justify-content-center text-center">
+        <div class="card-header bg-transparent border-success display-5">
+            סושי בהפתעה
+        </div>
+
+        <div class="card-body">
+            <br>
+            <h2>                             אין לכם כוח להתלבט ובא לכם הזמנה מהירה?<br>
+                בחרו כמות רולים מבוקשת והאם תרצו קומבינציה דגים או צמחונית<br>
+                וניצור בעבורכם קומבינציה מפנקת.<br></h2>
+        </div>
+        <div class="card-group ms-4 me-4 mb-4">
+            <div class="card">
+                <img src="../Assets/homeCards/pic4.jpeg" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+                <img src="../Assets/pictures/surprise.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+                <img src="../Assets/pictures/bamba.jpeg" class="card-img-top" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4 me-4 ms-4 mb-4 pt-4">
+
+
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <form name="surpriseForm" method="get" action="/todo" class="form-inline justify-content-center">
+
+                    <div class="form-control-lg text-center" >
+                        <label class="h3" for="numberOfRolls">בחר כמות רולים להזמנה</label>
+                        <input id="numberOfRolls" type="number" name="numberOfRolls" value="3" min="3" max="10">
+                    </div>
+
+                    <div class="form-check-line form-control-lg text-center">
+                        <label class="h3" for="vegOrFish">בחר האם תרצה קומבינציה צמחונית או עם דגים:</label>
+                        <input type="radio" name="vegOrFish" value="veg" id="veg" class="register-switch-input" checked>
+                        <label for="veg" class="register-switch-label h4">צמחוני</label>
+                        <input type="radio" name="vegOrFish" value="fish" id="fish" class="register-switch-input">
+                        <label for="fish" class="register-switch-label h4">דגים</label>
+                    </div>
+
+                    <div class="danger text-center h2">
+                        <strong>  הערה!  </strong>לאחר בחירת האופציות הרצויות ולחיצה על 'הזמנה',
+                        ההזמנה תופיע בעמוד ההזמנות האישי.
+                    </div>
+
+                     <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">להזמנה</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="shadow p-4 mt-5">
+    <div class="row text-center">
+        <div class="col">
+            <h5>עידו איתן</h5>
+        </div>
+        <div class="col">
+            <h5>054-5424564</h5>
+        </div>
+        <div class="col">
+            <h5>idoei@post.bgu.ac.il</h5>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</body>
+</html>
+
+
+
+
+
